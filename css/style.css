@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Monaque';
+    /* src: url('fonts/Monaque.otf'); */
+    src: url('/css/fonts/JetBrainsMono-Regular.woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Monaque';
+    font-size: 10px;
+    color: rgb(80, 80, 80);
+}
+
+body {
+    background: linear-gradient(220.55deg, rgb(255, 237, 70) 0%, #FF7EC7 100%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.tarjeta {
+    padding: 5%;
+    border-radius: 20px;
+    background-color: rgb(245, 245, 219);
+    border: 4px solid rgba(209, 93, 93, 0.767);
+    box-shadow: 
+    0px -5px 8px rgba(255, 133, 84, 0.719),
+    2px 5px 8px rgba(255, 70, 172, 0.616);
+}
+
+.tarjeta:hover {
+    padding: 7%;
+    rotate: 5deg;
+    transition: padding 500ms, rotate 500ms;
+    transition-delay: 80ms;
+}
+
+.tarjeta:not(:hover) {
+    padding: 5%;
+    rotate: 0deg;
+    transition: padding 500ms, rotate 500ms;
+}
+
+h1 {
+    font-size: 1.8rem;
+    text-align: left;
+    font-weight: 100;
+}
+
+h2 {
+    font-size: 2.6rem;
+    text-align: center;
+}
