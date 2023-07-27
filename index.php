@@ -20,7 +20,21 @@ include("biblioteca.php");
             $num1 = 5;
             $num2 = 2;
             ?>
+            <div>
+                <!-- Input animable compuesto por un input y un label  -->
+                <div class="inputGroup">
+                    <input type="text" require="" autocomplete="off" placeholder="">
+                    <label for="valueA">Valor A</label>
+                </div>
+
+                <!-- Input animable compuesto por un input y un label  -->
+                <div class="inputGroup">
+                    <input type="text" require="" autocomplete="off" placeholder="">
+                    <label for="valueB">Valor B</label>
+                </div>
+            </div>
             <?php
+            // Se imprime el resultado
             echo '<h2>El resultado es: ', operaciones('M', num1: $num1, num2: $num2), '</h2>';
             ?>
         </div>
