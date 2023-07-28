@@ -52,58 +52,49 @@ body {
     transition: padding 500ms;
 }
 
-/* Asigno estilos a todas las etiquetas h1 y h2 */
+/* Asigno estilos a todas las etiquetas h1, h2, h3, ul y li*/
 h1 {
     font-size: 1.8rem;
     text-align: left;
     font-weight: 100;
 }
 
-h2 {
-    font-size: 2.6rem;
+h2:not(:hover) {
+    font-size: 4rem;
+    text-align: center;
+    transition: font-size .26s ease-out;
+    transition-delay: 0.25s;
+}
+
+h2:hover {
+    font-size: 5rem;
+    text-align: center;
+    transition: font-size .3s ease;
+}
+
+h3 {
+    font-weight: 100;
+    font-size: 2.3rem;
     text-align: center;
 }
+
+ul {
+    margin: 20px 0;
+}
+
+li {
+    font-size: 1.9rem;
+    margin: 1.5px;
+    margin-left: 3rem;
+}
+
+li::marker {
+    content: "😎";
+}
+
+ul h3 {
+    margin-left: 0;
+    text-align: left;
+}
+
 /* Fin del estilo de las tarjetas */
-
-/* Estilos generales del input y del label*/
-.inputGroup {
-    margin: 2rem 0;
-    max-width: 190px;
-    position: relative;
-}
-
-/* Estilos del input text */
-.inputGroup input[type=text] {
-    font-size: 1.5rem;
-    padding: 0.8rem;
-    outline: none;
-    border: 2px solid rgba(209, 93, 93, 0.514);
-    background-color: transparent;
-    border-radius: 8px;
-    width: 100%;
-}
-
-/* Estilos del label */
-.inputGroup label {
-    font-size: 1.5rem;
-    position: absolute;
-    left: 0;
-    padding: 1.4rem 0 0 0.5rem;
-    color: rgb(121, 121, 121);
-    margin-left: 0.5rem;
-    pointer-events: none;
-    transition: all 0.34s ease;
-}
-
-/* Se anima el label cuando se hace click encima del input */
-.inputGroup :is(input[type=text]:focus, input:not(:placeholder-shown))~label {
-    transform: translateY(-50%) scale(0.8);
-    /* margin-left: 0.5rem; */
-    padding: 0;
-    background-color: beige;
-}
-
-/* El input tendra un color mas fuerte cuando el mouse se pase por encima */
-.inputGroup :is(input[type=text]:focus, input[type=text]:hover) {
-    border-color: rgba(209, 93, 93, 0.767);
-}
